@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Text Field</title>
+</head>
+
+<body>
+    COPY <input id="copy" type="text">
+    <br>
+    <br>
+    <button id="xerox" type="button">Xerox Button</button>
+    <br>
+    <br> 
+    PASTE <input id="paste" type="text">
+    <script>
+    var xerox = document.getElementById("xerox");
+    xerox.addEventListener("click", function() {
+
+        var copy = document.getElementById("copy");
+        var paste = document.getElementById("paste");
+        
+
+        paste.value = copy.value;
+        copy.value = "";
+
+        
+    }, false);
+    </script>
+</body>
+
+</html>
